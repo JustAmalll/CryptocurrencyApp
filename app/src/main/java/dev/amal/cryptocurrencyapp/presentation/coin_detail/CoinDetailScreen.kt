@@ -67,9 +67,7 @@ fun CoinDetailScreen(
                         crossAxisSpacing = 10.dp,
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        coin.tags.forEach { tag ->
-                            CoinTag(tag = tag)
-                        }
+                        coin.tags.forEach { tag -> CoinTag(tag = tag) }
                     }
                     Spacer(modifier = Modifier.height(15.dp))
                     Text(
@@ -100,8 +98,7 @@ fun CoinDetailScreen(
                     .align(Alignment.Center)
             )
         }
-        if (state.isLoading) {
+        if (state.isLoading)
             CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
-        }
     }
 }
